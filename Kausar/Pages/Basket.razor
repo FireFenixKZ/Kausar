@@ -1,0 +1,141 @@
+﻿  <!-- Page Content -->
+<div class="page-content">
+    <div class="container bottom-content shop-cart-wrapper">
+        <div class="item-list style-2">
+            <ul>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media media media-60">
+                            <img src="assets/images/food/food9.png" alt="logo">
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <h5 class="item-title sub-title"><a href="product-detail.html">Sweet Young Coconut</a></h5>
+                                <div class="item-subtitle text-soft">Fruit</div>
+                            </div>
+                            <div class="item-footer">
+                                <div class="d-flex align-items-center">
+                                    <h6 class="me-2">$ 4.0</h6>
+                                    <del class="off-text"><h6>$ 8.9</h6></del>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="dz-stepper border-1 rounded-stepper">
+                                        <input readonly="" class="stepper" type="text" value="0" name="demo3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media media media-60">
+                            <img src="assets/images/food/food10.png" alt="logo">
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <h5 class="item-title sub-title"><a href="product-detail.html">Fresh Spinach</a></h5>
+                                <div class="item-subtitle text-soft">Vegetables</div>
+                            </div>
+                            <div class="item-footer">
+                                <div class="d-flex align-items-center">
+                                    <h6 class="me-2">$ 7.2</h6>
+                                    <del class="off-text"><h6>$ 8.9</h6></del>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="dz-stepper border-1 rounded-stepper">
+                                        <input readonly="" class="stepper" type="text" value="0" name="demo3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media media media-60">
+                            <img src="assets/images/food/food11.png" alt="logo">
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <h5 class="item-title sub-title"><a href="product-detail.html">Chocolate Chips</a></h5>
+                                <div class="item-subtitle text-soft">Bakery</div>
+                            </div>
+                            <div class="item-footer">
+                                <div class="d-flex align-items-center">
+                                    <h6 class="me-2">$ 12.0</h6>
+                                    <del class="off-text"><h6>$ 8.9</h6></del>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="dz-stepper border-1 rounded-stepper">
+                                        <input readonly="" class="stepper" type="text" value="0" name="demo3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media media media-60">
+                            <img src="assets/images/food/food11.png" alt="logo">
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <h5 class="item-title sub-title"><a href="product-detail.html">Chocolate Chips</a></h5>
+                                <div class="item-subtitle text-soft">Bakery</div>
+                            </div>
+                            <div class="item-footer">
+                                <div class="d-flex align-items-center">
+                                    <h6 class="me-2">$ 12.0</h6>
+                                    <del class="off-text"><h6>$ 8.9</h6></del>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="dz-stepper border-1 rounded-stepper">
+                                        <input readonly="" class="stepper" type="text" value="0" name="demo3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer fixed ">
+        <div class="container">
+            <div class="view-title mb-2">
+                <ul>
+                    <li>
+                        <span class="text-soft">Subtotal</span>
+                        <span class="text-soft">$54.76</span>
+                    </li>
+                    <li>
+                        <span class="text-soft">TAX (2%)</span>
+                        <span class="text-soft">-$1.08</span>
+                    </li>
+                    <li>
+                        <h5>Total</h5>
+                        <h5>$53.68</h5>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="promo-bx">
+                            Apply Promotion Code
+                            <span>2 Promos</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-btn d-flex align-items-center">
+                <a @onclick="Click" class="btn btn-primary flex-1">CHECKOUT</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Content End-->
+@code {
+    public void Click()
+    {
+        App.Current.MainPage.Navigation.PushAsync(new CheckoutPage());
+    }
+}

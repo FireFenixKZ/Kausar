@@ -1,0 +1,106 @@
+﻿@page "/"
+@using Newtonsoft.Json
+@using System.IdentityModel.Tokens.Jwt
+@inject NavigationManager NavManager;
+
+<!-- Welcome Start -->
+<div class="content-body">
+    <div class="welcome-area">
+        <div class="join-area">
+            <div class="swiper get-started">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-info container">
+                            <div class="dz-media">
+                                <img src="assets/images/food/food1.png" alt="">
+                            </div>
+                            <div class="started">
+                                <h3 class="title font-w700">Welcome to<br>Grocery Application</h3>
+                                <p>Our products are always kept fresh. They are 100% natural, delicious, nutritions, healty and safe for consumption.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-info container">
+                            <div class="dz-media">
+                                <img src="assets/images/food/food2.png" alt="">
+                            </div>
+                            <div class="started">
+                                <h3 class="title font-w700">Best Quality Grocery <br>at your doorstep!</h3>
+                                <p>Furits provide the body with essential nutrition that helps maintain and improve overall health for you and your family.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-info container">
+                            <div class="dz-media">
+                                <img src="assets/images/food/food1.png" alt="">
+                            </div>
+                            <div class="started">
+                                <h3 class="title font-w700">Welcome to Tanam!<br>Grocery Application</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-info container">
+                            <div class="dz-media">
+                                <img src="assets/images/food/food2.png" alt="">
+                            </div>
+                            <div class="started">
+                                <h3 class="title font-w700">Best Quality Grocery <br>at your doorstep!</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-btn">
+                    <div class="swiper-pagination style-1 flex-1"></div>
+                </div>
+            </div>
+            <div class="bottom-btn container">
+                <a href="login.html" class="btn btn-primary btn-block">NEXT</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Welcome End -->
+@code {
+
+    protected async override Task OnInitializedAsync()
+    {
+        string userDetailsStr = await SecureStorage.GetAsync(nameof(Setting.UserBasicDetail));
+
+        if (!string.IsNullOrWhiteSpace(userDetailsStr))
+        {
+            var userBasicDetail = JsonConvert.DeserializeObject<UserBasicDetail>(userDetailsStr);
+
+            var handler = new JwtSecurityTokenHandler();
+            var jsontoken = handler.ReadToken(userBasicDetail.AccessToken) as JwtSecurityToken;
+            Setting.UserBasicDetail = userBasicDetail;
+
+            if (jsontoken.ValidTo < DateTime.UtcNow)
+            {
+                bool isTokenRefreshed = await AppService.RefreshToken();
+
+                if (isTokenRefreshed)
+                {
+                    NavManager.NavigateTo("/dashboard");
+                }
+                else
+                {
+                    NavManager.NavigateTo("/login");
+                }
+
+            }
+            else
+            {
+                NavManager.NavigateTo("/dashboard");
+            }
+        }
+        else
+        {
+            NavManager.NavigateTo("/login");
+        }
+    }
+}

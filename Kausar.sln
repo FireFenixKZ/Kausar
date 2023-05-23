@@ -1,0 +1,43 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31611.283
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{E7A46673-005B-4866-A34A-4CC756AF7829}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kausar.API", "Kausar.API\Kausar.API.csproj", "{CE280993-2571-4EAC-9EE4-31DBF4FF5356}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kausar.Infrastructure", "Kausar.Infrastructure\Kausar.Infrastructure.csproj", "{27D619AE-FF07-4358-A6DA-5E9D586AB6BC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kausar.Data", "Kausar.Data\Kausar.Data.csproj", "{9DEFA43B-0788-4396-A126-5984BC5A12EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE280993-2571-4EAC-9EE4-31DBF4FF5356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE280993-2571-4EAC-9EE4-31DBF4FF5356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE280993-2571-4EAC-9EE4-31DBF4FF5356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE280993-2571-4EAC-9EE4-31DBF4FF5356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27D619AE-FF07-4358-A6DA-5E9D586AB6BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27D619AE-FF07-4358-A6DA-5E9D586AB6BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27D619AE-FF07-4358-A6DA-5E9D586AB6BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27D619AE-FF07-4358-A6DA-5E9D586AB6BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DEFA43B-0788-4396-A126-5984BC5A12EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DEFA43B-0788-4396-A126-5984BC5A12EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DEFA43B-0788-4396-A126-5984BC5A12EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DEFA43B-0788-4396-A126-5984BC5A12EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27D619AE-FF07-4358-A6DA-5E9D586AB6BC} = {E7A46673-005B-4866-A34A-4CC756AF7829}
+		{9DEFA43B-0788-4396-A126-5984BC5A12EB} = {E7A46673-005B-4866-A34A-4CC756AF7829}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		        SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+		SolutionGuid = {0DDA0DB9-0763-4CD2-8A23-751C1F637A25}
+	EndGlobalSection
+EndGlobal

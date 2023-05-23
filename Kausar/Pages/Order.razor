@@ -1,0 +1,307 @@
+﻿@page "/orders"
+@inject NavigationManager navManager
+
+<!-- Page Content -->
+<div class="page-content bottom-content">
+    <div class="container">
+        <div class="dz-tab style-4">
+            <div class="tab-slide-effect mx-2">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    @*<li class="tab-active-indicator" style="width: 108.391px; transform: translateX(177.625px);"></li>*@
+                    <li class="nav-item active" role="presentation">
+                        <button class="nav-link active" id="order-tab" data-bs-toggle="tab" data-bs-target="#order-tab-pane" type="button" role="tab" aria-controls="order-tab-pane" aria-selected="false" tabindex="-1">New Orders</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="order2-tab" data-bs-toggle="tab" data-bs-target="#order2-tab-pane" type="button" role="tab" aria-controls="order2-tab-pane" aria-selected="false" tabindex="-1">Ongoing Orders</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="order3-tab" data-bs-toggle="tab" data-bs-target="#order3-tab-pane" type="button" role="tab" aria-controls="order3-tab-pane" aria-selected="false" tabindex="-1">Past Orders</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content px-0" id="myTabContent1">
+                <div class="tab-pane fade active show" id="order-tab-pane" role="tabpanel" aria-labelledby="order-tab" tabindex="0">
+                    <div class="card order-box">
+                        <div class="card-body">
+                            <a href="order-details.html">
+                                <div class="order-content">
+                                    <div class="media media-70 rounded me-3">
+                                        <img src="assets/images/categorie/3.png" alt="image">
+                                    </div>
+                                    <div class="right-content">
+                                        <h6 class="order-number">ORDER # 277</h6>
+                                        <ul>
+                                            <li>
+                                                <p class="order-name">Apple Royal Gal... - 1kg - $10.0</p>
+                                                <span class="order-quantity">x9</span>
+                                            </li>
+                                            <li>
+                                                <h6 class="order-time">Monday, February 13,2023 6:53pm</h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="badge badge-md badge-primary float-end rounded-sm">CREATED</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card order-box">
+                        <div class="card-body">
+                            <a href="order-details.html" @onclick="Click">
+                                <div class="order-content">
+                                    <div class="media media-70 rounded me-3">
+                                        <img src="assets/images/categorie/4.png" alt="image">
+                                    </div>
+                                    <div class="right-content">
+                                        <h6 class="order-number">ORDER # 277</h6>
+                                        <ul>
+                                            <li>
+                                                <p class="order-name">Apple Royal Gal... - 1kg - $10.0</p>
+                                                <span class="order-quantity">x1</span>
+                                            </li>
+                                            <li>
+                                                <h6 class="order-time">Monday, February 13,2023 6:53pm</h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="badge badge-md badge-primary float-end rounded-sm">CREATED</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="order2-tab-pane" role="tabpanel" aria-labelledby="order2-tab" tabindex="0">
+                    <div class="card order-box">
+                        <div class="card-body">
+                            <a href="order-details.html">
+                                <div class="order-content">
+                                    <div class="media media-70 rounded me-3">
+                                        <img src="assets/images/categorie/3.png" alt="image">
+                                    </div>
+                                    <div class="right-content">
+                                        <h6 class="order-number">ORDER # 277</h6>
+                                        <ul>
+                                            <li>
+                                                <p class="order-name">Apple Royal Gal... - 1kg - $10.0</p>
+                                                <span class="order-quantity">x1</span>
+                                            </li>
+                                            <li>
+                                                <h6 class="order-time">Monday, February 13,2023 6:53pm</h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="badge badge-md badge-primary float-end rounded-sm">ONGOING</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card order-box">
+                        <div class="card-body">
+                            <a href="order-details.html">
+                                <div class="order-content">
+                                    <div class="media media-70 rounded me-3">
+                                        <img src="assets/images/categorie/4.png" alt="image">
+                                    </div>
+                                    <div class="right-content">
+                                        <h6 class="order-number">ORDER # 277</h6>
+                                        <ul>
+                                            <li>
+                                                <p class="order-name">Apple Royal Gal... - 1kg - $10.0</p>
+                                                <span class="order-quantity">x1</span>
+                                            </li>
+                                            <li>
+                                                <p class="order-name">Apple Royal Gal... - 1kg - $10.0</p>
+                                                <span class="order-quantity">x1</span>
+                                            </li>
+                                            <li>
+                                                <p class="order-name">Apple Royal Gal... - 1kg - $10.0</p>
+                                                <span class="order-quantity">x2</span>
+                                            </li>
+                                            <li>
+                                                <h6 class="order-time">Monday, February 13,2023 6:53pm</h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="badge badge-md badge-primary float-end rounded-sm">ONGOING</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card order-box">
+                        <div class="card-body">
+                            <a href="order-details.html">
+                                <div class="order-content">
+                                    <div class="media media-70 rounded me-3">
+                                        <img src="assets/images/categorie/5.png" alt="image">
+                                    </div>
+                                    <div class="right-content">
+                                        <h6 class="order-number">ORDER # 277</h6>
+                                        <ul>
+                                            <li>
+                                                <p class="order-name">Apple Royal Gal... - 1kg - $10.0</p>
+                                                <span class="order-quantity">x2</span>
+                                            </li>
+                                            <li>
+                                                <p class="order-name">Apple Royal Gal... - 1kg - $10.0</p>
+                                                <span class="order-quantity">x1</span>
+                                            </li>
+                                            <li>
+                                                <h6 class="order-time">Monday, February 13,2023 6:53pm</h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="badge badge-md badge-primary float-end rounded-sm">ONGOING</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card order-box">
+                        <div class="card-body">
+                            <a href="order-details.html">
+                                <div class="order-content">
+                                    <div class="media media-70 rounded me-3">
+                                        <img src="assets/images/categorie/6.png" alt="image">
+                                    </div>
+                                    <div class="right-content">
+                                        <h6 class="order-number">ORDER # 277</h6>
+                                        <ul>
+                                            <li>
+                                                <p class="order-name">Apple Royal Gal... - 1kg - $10.0</p>
+                                                <span class="order-quantity">x1</span>
+                                            </li>
+                                            <li>
+                                                <p class="order-name">Apple Royal Gal... - 1kg - $10.0</p>
+                                                <span class="order-quantity">x2</span>
+                                            </li>
+                                            <li>
+                                                <p class="order-name">Apple Royal Gal... - 1kg - $10.0</p>
+                                                <span class="order-quantity">x2</span>
+                                            </li>
+                                            <li>
+                                                <h6 class="order-time">Monday, February 13,2023 6:53pm</h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="badge badge-md badge-primary float-end rounded-sm">ONGOING</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card order-box">
+                        <div class="card-body">
+                            <a href="order-details.html">
+                                <div class="order-content">
+                                    <div class="media media-70 rounded me-3">
+                                        <img src="assets/images/categorie/7.png" alt="image">
+                                    </div>
+                                    <div class="right-content">
+                                        <h6 class="order-number">ORDER # 277</h6>
+                                        <ul>
+                                            <li>
+                                                <p class="order-name">Apple Royal Gal... - 1kg - $10.0</p>
+                                                <span class="order-quantity">x1</span>
+                                            </li>
+                                            <li>
+                                                <p class="order-name">Apple Royal Gal... - 1kg - $10.0</p>
+                                                <span class="order-quantity">x2</span>
+                                            </li>
+                                            <li>
+                                                <p class="order-name">Apple Royal Gal... - 1kg - $10.0</p>
+                                                <span class="order-quantity">x1</span>
+                                            </li>
+                                            <li>
+                                                <h6 class="order-time">Monday, February 13,2023 6:53pm</h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="badge badge-md badge-primary float-end rounded-sm">ONGOING</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card order-box">
+                        <div class="card-body">
+                            <a href="order-details.html">
+                                <div class="order-content">
+                                    <div class="media media-70 rounded me-3">
+                                        <img src="assets/images/categorie/8.png" alt="image">
+                                    </div>
+                                    <div class="right-content">
+                                        <h6 class="order-number">ORDER # 277</h6>
+                                        <ul>
+                                            <li>
+                                                <p class="order-name">Apple Royal Gal... - 1kg - $10.0</p>
+                                                <span class="order-quantity">x9</span>
+                                            </li>
+                                            <li>
+                                                <h6 class="order-time">Monday, February 13,2023 6:53pm</h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="badge badge-md badge-primary float-end rounded-sm">ONGOING</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="order3-tab-pane" role="tabpanel" aria-labelledby="order3-tab" tabindex="0">
+                    <div class="card order-box">
+                        <div class="card-body">
+                            <a href="order-details.html">
+                                <div class="order-content">
+                                    <div class="media media-70 rounded me-3">
+                                        <img src="assets/images/categorie/3.png" alt="image">
+                                    </div>
+                                    <div class="right-content">
+                                        <h6 class="order-number">ORDER # 277</h6>
+                                        <ul>
+                                            <li>
+                                                <p class="order-name">Apple Royal Gal... - 1kg - $10.0</p>
+                                                <span class="order-quantity">x9</span>
+                                            </li>
+                                            <li>
+                                                <h6 class="order-time">Monday, February 13,2023 6:53pm</h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="badge badge-md badge-primary float-end rounded-sm">DELIVERD</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card order-box">
+                        <div class="card-body">
+                            <a href="order-details.html">
+                                <div class="order-content">
+                                    <div class="media media-70 rounded me-3">
+                                        <img src="assets/images/categorie/4.png" alt="image">
+                                    </div>
+                                    <div class="right-content">
+                                        <h6 class="order-number">ORDER # 277</h6>
+                                        <ul>
+                                            <li>
+                                                <p class="order-name">Apple Royal Gal... - 1kg - $10.0</p>
+                                                <span class="order-quantity">x1</span>
+                                            </li>
+                                            <li>
+                                                <h6 class="order-time">Monday, February 13,2023 6:53pm</h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="badge badge-md badge-primary float-end rounded-sm">DELIVERD</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Content End-->
+@code {
+    public void Click()
+    {
+        App.Current.MainPage.Navigation.PushAsync(new OrderDetailsPage());
+    }
+}
